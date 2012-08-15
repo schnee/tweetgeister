@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Node-Link Tree</title>
+    <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
+    <script type="text/javascript" src="protovis-d3.2.js"></script>
+    <script type="text/javascript" src="proto.js"></script>
+    <style type="text/css">
+
+#fig {
+  width: 800px;
+  height: 700px;
+}
+
+    </style>
+  </head>
+  <body><div id="center"><div id="fig">
+    <script type="text/javascript+protovis">
+
+var vis = new pv.Panel()
+    .width(1000)
+    .height(1000)
+	.event("mousedown", pv.Behavior.pan())
+    .event("mousewheel", pv.Behavior.zoom())
+    .left(75)
+    .right(-75)
+    .top(-30)
+    .bottom(-80);
+
+
+
+var tree = vis.add(pv.Layout.Tree)
+    .nodes(pv.dom(root).root("parent").nodes())
+    .depth(40)
+    .breadth(15)
+    .orient("radial");
+
+tree.link.add(pv.Line);
+
+tree.node.add(pv.Dot)
+    .fillStyle(function(n) n.firstChild ? "#aec7e8" : "#ff7f0e")
+	.size(2)
+	.title(function (d) { return d.nodeValue; });
+
+tree.label.add(pv.Label)
+	.title(function (d) {return d.text; });
+
+vis.render();
+
+    </script>
+  </div></div></body>
+</html>

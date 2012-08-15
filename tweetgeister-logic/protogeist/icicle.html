@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Icicle</title>
+    <link rel="stylesheet" type="text/css" href="ex.css"/>
+    <script type="text/javascript" src="protovis-d3.2.js"></script>
+    <script type="text/javascript" src="tg.js"></script>
+    <style type="text/css">
+
+#fig {
+  width: 900px;
+  height: 330px;
+}
+
+    </style>
+  </head>
+  <body><div id="center"><div id="fig">
+    <script type="text/javascript+protovis">
+
+var vis = new pv.Panel()
+    .width(3000)
+    .height(7000)
+    .bottom(30);
+
+var layout = vis.add(pv.Layout.Partition.Fill)
+    .nodes(pv.dom(root).root("interinfo").nodes())
+//    .order("descending")
+    .orient("right")
+    .size(function(d) 20);
+
+layout.node.add(pv.Bar)
+    .fillStyle(pv.Colors.category19().by(function(d) d.parentNode && d.parentNode.nodeName))
+    .strokeStyle("rgba(255,255,255,.5)")
+    .lineWidth(1)
+    .antialias(false);
+
+layout.label.add(pv.Label)
+ //   .textAngle(-Math.PI / 2)
+	.event("mouseover", function(d) this.visible(true))
+	.event("mouseout", function(d) this.visible(false))
+    .visible(true);
+
+vis.render();
+
+    </script>
+  </div></div></body>
+</html>

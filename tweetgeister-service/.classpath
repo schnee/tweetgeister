@@ -1,0 +1,82 @@
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar" sourcepath="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" sourcepath="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/asm/asm/3.1/asm-3.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/rosaloves/bitlyj/2.0.0/bitlyj-2.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2/commons-collections-3.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-csv/commons-csv/1.0-SNAPSHOT/commons-csv-1.0-SNAPSHOT.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.5/commons-lang-2.5.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6.jar" sourcepath="M2_REPO/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/freemarker/freemarker/2.3.16/freemarker-2.3.16.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-core/1.4/jersey-core-1.4.jar" sourcepath="M2_REPO/com/sun/jersey/jersey-core/1.4/jersey-core-1.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/com/sun/jersey/jersey-core/1.4/jersey-core-1.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-server/1.4/jersey-server-1.4.jar" sourcepath="M2_REPO/com/sun/jersey/jersey-server/1.4/jersey-server-1.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/com/sun/jersey/jersey-server/1.4/jersey-server-1.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/sun/jersey/contribs/jersey-spring/1.4/jersey-spring-1.4.jar" sourcepath="M2_REPO/com/sun/jersey/contribs/jersey-spring/1.4/jersey-spring-1.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/com/sun/jersey/contribs/jersey-spring/1.4/jersey-spring-1.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/sf/json-lib/json-lib/2.2.3/json-lib-2.2.3-jdk15.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.8.2/junit-4.8.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/lingpipe/lingpipe/4.0.0/lingpipe-4.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.16/log4j-1.2.16.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/lucene/lucene-core/3.0.1/lucene-core-3.0.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/sf/opencsv/opencsv/2.1/opencsv-2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-aop/3.0.5.RELEASE/spring-aop-3.0.5.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-asm/3.0.5.RELEASE/spring-asm-3.0.5.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-beans/2.5.6/spring-beans-2.5.6.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/2.5.6/spring-context-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-context/2.5.6/spring-context-2.5.6-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/org/springframework/spring-context/2.5.6/spring-context-2.5.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context-support/3.0.5.RELEASE/spring-context-support-3.0.5.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/2.5.6/spring-core-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-core/2.5.6/spring-core-2.5.6-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/org/springframework/spring-core/2.5.6/spring-core-2.5.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-expression/3.0.5.RELEASE/spring-expression-3.0.5.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-web/2.5.6/spring-web-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-web/2.5.6/spring-web-2.5.6-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/bschneeman/.m2/repository/org/springframework/spring-web/2.5.6/spring-web-2.5.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-webmvc/3.0.5.RELEASE/spring-webmvc-3.0.5.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/schnee/tweetgeister/tweetgeister-logic/1.0-SNAPSHOT/tweetgeister-logic-1.0-SNAPSHOT.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/twitter4j/twitter4j-core/2.1.6/twitter4j-core-2.1.6.jar"/>
+</classpath>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>Sunburst</title>
+    <link rel="stylesheet" type="text/css" href="ex.css"/>
+    <script type="text/javascript" src="protovis-d3.2.js"></script>
+    <script type="text/javascript" src="tg.js"></script>
+    <style type="text/css">
+
+#fig {
+  width: 900px;
+  margin-top: 5px;
+  height: 840px;
+  text-align: center;
+}
+
+    </style>
+  </head>
+  <body><div id="center"><div id="fig">
+    <script type="text/javascript+protovis">
+
+var vis = new pv.Panel()
+    .width(1000)
+    .height(1000)
+	.event("mousedown", pv.Behavior.pan())
+    .event("mousewheel", pv.Behavior.zoom());
+
+var partition = vis.add(pv.Layout.Partition.Fill)
+    .nodes(pv.dom(root).root("ellen degeneris").nodes())
+    .size(function(d) d.firstChild ? 0 : 1)
+    .order("descending")
+    .orient("radial");
+
+var wedge = partition.node.add(pv.Wedge)
+    .fillStyle(pv.Colors.category19().by(function(d) d.parentNode && d.parentNode.nodeName))
+    .strokeStyle("#000")
+	.title(function (d) { return d.nodeName; })
+    .lineWidth(0.5);
+
+
+partition.label.add(pv.Label)
+	.visible(0);
+
+vis.render();
+
+/* Update the layout's size method and re-render. */
+function update(method) {
+  switch (method) {
+    case "byte": partition.size(function(d) d.nodeValue); break;
+    case "file": partition.size(function(d) d.firstChild ? 0 : 1); break;
+  }
+  vis.render();
+}
+
+    </script>
+    Mouse-wheel to zoom<br>
+    Hover for tool tip<br>
+    Left-click-drag to pan
+</body>
+</html>

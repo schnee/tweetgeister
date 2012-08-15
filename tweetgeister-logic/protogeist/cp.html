@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Emmy Awards Tweet Clusters</title>
+    <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
+    <script type="text/javascript" src="protovis-r3.2.js"></script>
+    <script type="text/javascript" src="tg.js"></script>
+    <style type="text/css">
+
+#fig {
+  width: 800px;
+  height: 800px;
+}
+
+    </style>
+  </head>
+  <body>
+  
+    <div><span>A clustering of tweets related to "Emmy Awards" 8-30-2010</span><br />
+  <span>You must use modern versions of Firefox, Chrome or Safari to view the visualization</span><br />
+  <span>left-click and drag to pan, mousewheel to zoom, hover to see the tweet, click dot to open the tweet</span></div>
+  <div id="center"><div id="fig">
+    <script type="text/javascript+protovis">
+
+        var w = document.body.clientWidth, 
+        h = document.body.clientHeight, 
+                data = [{name: "hallo", target: 1}, 
+                        {name: "hello", target: 4}, 
+                        {name: "hello", target: 4}, 
+                        {name: "hello", target: 5}, 
+                        {name: "hello", target: 0}, 
+                        {name: "hello", target: 1}, 
+                        {name: "hello", target: 3}, 
+                        {name: "hello", target: 1}, 
+                        {name: "hello", target: 2}], 
+                r = 150, 
+                centerX = h / 2, 
+                centerY = w / 2; 
+        function getLineData(index, target) { 
+                return [ 
+                        { 
+                                x: (w / 2 + r * Math.sin(Math.PI * 2 * index / data.length)), 
+                                y: (h / 2 + r * Math.cos(Math.PI * 2 * index / data.length)) 
+                        }, 
+                        { x: w / 2, y: h / 2 }, 
+                        { 
+                                x: (w / 2 + r * Math.sin(Math.PI * 2 * target / data.length)), 
+                                y: (h / 2 + r * Math.cos(Math.PI * 2 * target / data.length)) 
+                        } 
+                ] 
+        } 
+        function generateLineData() { 
+                var lineData = new Array() 
+                for (i = 0; i < data.length; i++) { 
+                        lineData[i] = getLineData(i, data[i].target) 
+                } 
+                return lineData 
+        } 
+        var vis = new pv.Panel() 
+        .width(w) 
+        .height(h) 
+        vis.add(pv.Dot) 
+                .data(data) 
+                .bottom(function(d) centerX + r * Math.cos(Math.PI * 2 * 
+this.index / data.length )) 
+                .left(function() centerY + r * Math.sin(Math.PI * 2 * this.index / 
+data.length )) 
+          .anchor("right") 
+          .add(pv.Label) 
+                .text(function(d) d.name) 
+                .bottom(function() centerX + r * Math.cos(Math.PI * 2 * this.index / 
+data.length )) 
+                .left(function() centerY + r * Math.sin(Math.PI * 2 * this.index / 
+data.length )) 
+                .textAngle(function() -0.5 * Math.PI + 2 * Math.PI * this.index / 
+data.length); 
+        vis.add(pv.Panel) 
+                .data(function() generateLineData()) 
+          .add(pv.Line) 
+                .data(function(array) array) 
+                .bottom(function(d) d.y) 
+                .left(function(d) d.x) 
+                .interpolate("basis") 
+        vis.render(); 
+
+    </script>
+  </div></div></body>
+</html>
